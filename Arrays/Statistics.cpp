@@ -102,19 +102,19 @@ double Avg(char arr[ROWS][COLS], const int ROWS, const int COLS)
 int minValueIn(int arr[], const int n)
 {
 	int min = arr[0];
-	for (int i = 1; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		if (min < arr[i]) min = arr[i];
+		if (arr[i] < min) min = arr[i];
 	}
-	return  min;
+	return min;
 }
 
 double minValueIn(double arr[], const int n)
 {
 	double min = arr[0];
-	for (int i = 1; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		if (min < arr[i]) min = arr[i];
+		if (arr[i] < min) min = arr[i];
 	}
 	return min;
 }
@@ -122,9 +122,9 @@ double minValueIn(double arr[], const int n)
 char minValueIn(char arr[], const int n)
 {
 	char min = (double)arr[0];
-	for (int i = 1; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		if (min < (double)arr[i]) min = (double)arr[i];
+		if ((double)arr[i] < min) min = (double)arr[i];
 	}
 	return min;
 }
@@ -132,11 +132,11 @@ char minValueIn(char arr[], const int n)
 int minValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	int min = arr[0][0];
-	for (int i = 1; i < ROWS; i++)
+	for (int i = 0; i < ROWS; i++)
 	{
-		for (int j = 1; j < COLS; i++)
+		for (int j = 0; j < COLS; j++)
 		{
-			if (min < arr[i][j]) min = arr[i][j];
+			if (arr[i][j] < min) min = arr[i][j];
 		}
 	}
 	return min;
@@ -145,11 +145,11 @@ int minValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS)
 double minValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	double min = arr[0][0];
-	for (int i = 1; i < ROWS; i++)
+	for (int i = 0; i < ROWS; i++)
 	{
-		for (int j = 1; j < COLS; i++)
+		for (int j = 0; j < COLS; j++)
 		{
-			if (min < arr[i][j]) min = arr[i][j];
+			if (arr[i][j] < min) min = arr[i][j];
 		}
 
 	}
@@ -159,11 +159,11 @@ double minValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
 char minValueIn(char arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	char min = (double)arr[0][0];
-	for (int i = 1; i < ROWS; i++)
+	for (int i = 0; i < ROWS; i++)
 	{
-		for (int j = 1; j < COLS; i++)
+		for (int j = 0; j < COLS; j++)
 		{
-			if (min < (double)arr[i][j]) min = (double)arr[i][j];
+			if ((double)arr[i][j] < min) min = (double)arr[i][j];
 		}
 	}
 	return min;
@@ -172,9 +172,9 @@ char minValueIn(char arr[ROWS][COLS], const int ROWS, const int COLS)
 int maxValueIn(int arr[], const int n)
 {
 	int max = arr[0];
-	for (int i = 1; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		if (max > arr[i]) max = arr[i];
+		if (max < arr[i]) max = arr[i];
 	}
 	return max;
 }
@@ -182,9 +182,9 @@ int maxValueIn(int arr[], const int n)
 double maxValueIn(double arr[], const int n)
 {
 	double max = arr[0];
-	for (int i = 1; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		if (max > arr[i]) max = arr[i];
+		if (max < arr[i]) max = arr[i];
 	}
 	return max;
 }
@@ -192,9 +192,9 @@ double maxValueIn(double arr[], const int n)
 char maxValueIn(char arr[], const int n)
 {
 	char max = (double)arr[0];
-	for (int i = 1; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		if (max > (double)arr[i]) max = (double)arr[i];
+		if (max < (double)arr[i]) max = (double)arr[i];
 	}
 	return max;
 }
@@ -202,24 +202,24 @@ char maxValueIn(char arr[], const int n)
 int maxValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	int max = arr[0][0];
-	for (int i = 1; i < ROWS; i++)
+	for (int i = 0; i < ROWS; i++)
 	{
-		for (int j = 1; j < COLS; i++)
+		for (int j = 0; j < COLS; j++)
 		{
-			if (max > arr[i][j]) max = arr[i][j];
+			if (max < arr[i][j]) max = arr[i][j];
 		}
 	}
-	return  max;
+	return max;
 }
 
 double maxValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	double max = arr[0][0];
-	for (int i = 1; i < ROWS; i++)
+	for (int i = 0; i < ROWS; i++)
 	{
-		for (int j = 1; j < COLS; i++)
+		for (int j = 0; j < COLS; j++)
 		{
-			if (max > arr[i][j]) max = arr[i][j];
+			if (max < arr[i][j]) max = arr[i][j];
 		}
 	}
 	return max;
@@ -228,11 +228,11 @@ double maxValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
 char maxValueIn(char arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	char max = (double)arr[0][0];
-	for (int i = 1; i < ROWS; i++)
+	for (int i = 0; i < ROWS; i++)
 	{
-		for (int j = 1; j < COLS; i++)
+		for (int j = 0; j < COLS; j++)
 		{
-			if (max > (double)arr[i][j]) max = (double)arr[i][j];
+			if (max < (double)arr[i][j]) max = (double)arr[i][j];
 		}
 	}
 	return max;

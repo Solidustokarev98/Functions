@@ -71,7 +71,7 @@ void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 
 		}
 	}
-	cout << "Массив отсортирован за " << iterations << "итераций\n";
+	cout << "Массив отсортирован за " << iterations << " итераций\n";
 }
 
 void Sort(double arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -97,7 +97,7 @@ void Sort(double arr[ROWS][COLS], const int ROWS, const int COLS)
 
 		}
 	}
-	cout << "Массив отсортирован за " << iterations << "итераций\n";
+	cout << "Массив отсортирован за " << iterations << " итераций\n";
 }
 
 void Sort(char arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -123,5 +123,5 @@ void Sort(char arr[ROWS][COLS], const int ROWS, const int COLS)
 
 		}
 	}
-	cout << "Массив отсортирован за " << iterations << "итераций\n";
+	cout << "Массив отсортирован за " << iterations << " итераций\n";
 }
