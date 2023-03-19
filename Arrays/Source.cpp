@@ -78,23 +78,23 @@ void Sort(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
 //Выполняет циклический сдвиг массива на заданное число элемменто влево
 	//Одномерные массивы
-void shiftLeft(int arr[], const int n);
-void shiftLeft(double arr[], const int n);
-void shiftLeft(char arr[], const int n);
+void shiftLeft(int arr[], const int n, int number_of_shift);
+void shiftLeft(double arr[], const int n, int number_of_shift);
+void shiftLeft(char arr[], const int n, int number_of_shift);
 	//Двумерные массивы
-void shiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS);
-void shiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS);
-void shiftLeft(char arr[ROWS][COLS], const int ROWS, const int COLS);
+void shiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
+void shiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
+void shiftLeft(char arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
 
 //Выполняет циклический сдвиг массива на заданное число элемменто вправо
 	//Одномерные массивы
-void shiftRight(int arr[], const int n);
-void shiftRight(double arr[], const int n);
-void shiftRight(char arr[], const int n);
+void shiftRight(int arr[], const int n, int number_of_shift);
+void shiftRight(double arr[], const int n, int number_of_shift);
+void shiftRight(char arr[], const int n, int number_of_shift);
 	//Двумерные массивы
-void shiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS);
-void shiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS);
-void shiftRight(char arr[ROWS][COLS], const int ROWS, const int COLS);
+void shiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
+void shiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
+void shiftRight(char arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
 
 //заполняет массив уникальными случайными числами в заданном диапазоне
 	//Одномерные массивы (Реализованы)
@@ -373,7 +373,7 @@ int Sum(int arr[], const int n)
 	{
 		sum+=arr[i];
 	}
-	cout <<"Сумма элеметов массива: "<< sum << endl;
+	return sum;
 }
 
 double Sum(double arr[], const int n)
@@ -383,7 +383,7 @@ double Sum(double arr[], const int n)
 	{
 		sum += arr[i];
 	}
-	cout << "Сумма элеметов массива: " << sum << endl;
+	return sum;
 }
 
 char Sum(char arr[], const int n)
@@ -393,7 +393,7 @@ char Sum(char arr[], const int n)
 	{
 		sum += (double)arr[i];
 	}
-	cout << "Сумма элеметов массива: " << (char)sum << endl;
+	return sum;
 }
 
 int Sum(int arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -406,7 +406,7 @@ int Sum(int arr[ROWS][COLS], const int ROWS, const int COLS)
 			sum+=arr[i][j];
 		}		
 	}
-	cout <<"Сумма элеметов массива: "<< sum << endl;
+	return sum;
 }
 
 double Sum(double arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -419,7 +419,7 @@ double Sum(double arr[ROWS][COLS], const int ROWS, const int COLS)
 			sum += arr[i][j];
 		}
 	}
-	cout << "Сумма элеметов массива: " << sum << endl;
+	return sum;
 }
 
 char Sum(char arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -432,7 +432,7 @@ char Sum(char arr[ROWS][COLS], const int ROWS, const int COLS)
 			sum += (double)arr[i][j];
 		}
 	}
-	cout << "Сумма элеметов массива: " << (char)sum << endl;
+	return sum;
 }
 
 double Avg(int arr[], const int n)
@@ -470,9 +470,9 @@ int minValueIn(int arr[], const int n)
 	int min = arr[0];
 	for (int i = 1; i < n; i++)
 	{
-		if (min < arr[i]) min = arr[i];
+		if (min > arr[i]) min = arr[i];
 	}
-	cout << "Минимальное число массива: " << min << endl;
+	return min;
 }
 
 double minValueIn(double arr[], const int n)
@@ -480,9 +480,9 @@ double minValueIn(double arr[], const int n)
 	double min = arr[0];
 	for (int i = 1; i < n; i++)
 	{
-		if (min < arr[i]) min = arr[i];
+		if (min > arr[i]) min = arr[i];
 	}
-	cout << "Минимальное число массива: " << min << endl;
+	return min;
 }
 
 char minValueIn(char arr[], const int n)
@@ -490,9 +490,9 @@ char minValueIn(char arr[], const int n)
 	double min = (double)arr[0];
 	for (int i = 1; i < n; i++)
 	{
-		if (min < (double)arr[i]) min = (double)arr[i];
+		if (min > (double)arr[i]) min = (double)arr[i];
 	}
-	cout << "Минимальное число массива: " << (char)min << endl;
+	return min;
 }
 
 int minValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -502,10 +502,10 @@ int minValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS)
 	{
 		for (int j = 1; j < COLS; i++)
 		{
-			if (min < arr[i][j]) min = arr[i][j];
+			if (min > arr[i][j]) min = arr[i][j];
 		}		
 	}
-	cout << "Минимальное число массива: " << min << endl;
+	return min;
 }
 
 double minValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -515,11 +515,11 @@ double minValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
 	{
 		for (int j = 1; j < COLS; i++)
 		{
-			if (min < arr[i][j]) min = arr[i][j];
+			if (min > arr[i][j]) min = arr[i][j];
 		}
 		
 	}
-	cout << "Минимальное число массива: " << min << endl;
+	return min;
 }
 
 char minValueIn(char arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -529,10 +529,10 @@ char minValueIn(char arr[ROWS][COLS], const int ROWS, const int COLS)
 	{
 		for (int j = 1; j < COLS; i++)
 		{
-			if (min < (double)arr[i][j]) min = (double)arr[i][j];
+			if (min > (double)arr[i][j]) min = (double)arr[i][j];
 		}		
 	}
-	cout << "Минимальное число массива: " << (char)min << endl;
+	return min;
 }
 
 int maxValueIn(int arr[], const int n)   
@@ -540,9 +540,9 @@ int maxValueIn(int arr[], const int n)
 	int max = arr[0];
 	for (int i = 1; i < n; i++)
 	{
-		if (max > arr[i]) max = arr[i];
+		if (max < arr[i]) max = arr[i];
 	}
-	cout << "Максимальное число массива: " << max << endl;
+	return max;
 }
 
 double maxValueIn(double arr[], const int n)
@@ -550,9 +550,9 @@ double maxValueIn(double arr[], const int n)
 	double max = arr[0];
 	for (int i = 1; i < n; i++)
 	{
-		if (max > arr[i]) max = arr[i];
+		if (max < arr[i]) max = arr[i];
 	}
-	cout << "Максимальное число массива: " << max << endl;
+	return max;
 }
 
 char maxValueIn(char arr[], const int n)
@@ -560,9 +560,9 @@ char maxValueIn(char arr[], const int n)
 	double max = (double)arr[0];
 	for (int i = 1; i < n; i++)
 	{
-		if (max > (double)arr[i]) max = (double)arr[i];
+		if (max < (double)arr[i]) max = (double)arr[i];
 	}
-	cout << "Минимальное число массива: " << (char)max << endl;
+	return max;
 }
 
 int maxValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -572,10 +572,10 @@ int maxValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS)
 	{
 		for (int j = 1; j < COLS; i++)
 		{
-			if (max > arr[i][j]) max = arr[i][j];
+			if (max < arr[i][j]) max = arr[i][j];
 		}		
 	}
-	cout << "Максимальное число массива: " << max << endl;
+	return max;
 }
 
 double maxValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -585,10 +585,10 @@ double maxValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
 	{
 		for (int j = 1; j < COLS; i++)
 		{
-			if (max > arr[i][j]) max = arr[i][j];
+			if (max < arr[i][j]) max = arr[i][j];
 		}		
 	}
-	cout << "Максимальное число массива: " << max << endl;
+	return max;
 }
 
 
@@ -599,10 +599,10 @@ char maxValueIn(char arr[ROWS][COLS], const int ROWS, const int COLS)
 	{
 		for (int j = 1; j < COLS; i++)
 		{
-			if (max > (double)arr[i][j]) max = (double)arr[i][j];
+			if (max < (double)arr[i][j]) max = (double)arr[i][j];
 		}		
 	}
-	cout << "Минимальное число массива: " << (char)max << endl;
+	return max;
 }
 
 void Sort(int arr[], const int n)
@@ -1052,6 +1052,42 @@ void UniqueRand(char arr[ROWS][COLS], const int ROWS, const int COLS)
 
 void Search(int arr[], const int n)
 {
+	int pov = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (arr[i] == arr[j])
+			{
+				cout << arr[i] << "\t";
+				pov++;
+			}
+		}
+	}
+	cout << "Количество повторений: " << pov << endl;
+}
+
+void Search(double arr[], const int n)
+{
 
 }
 
+void Search(char arr[], const int n)
+{
+
+}
+
+void Search(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+
+}
+
+void Search(double arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+
+}
+
+void Search(char arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+
+}
