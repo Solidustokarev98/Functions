@@ -1,117 +1,117 @@
-//Токарев СБД211
+п»ї//РўРѕРєР°СЂРµРІ РЎР‘Р”211
 #include<iostream>
 using namespace std;
 
 const int ROWS = 5;
 const int COLS = 8;
-//заполняет массив случайными числами
-	//Одномерные массивы
+//Р·Р°РїРѕР»РЅСЏРµС‚ РјР°СЃСЃРёРІ СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void FillRand(int arr[], const int n, int minRand=0, int maxRand=100);		
 void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(char arr[], const int n);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 void FillRand(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
-//выводит массив на экран
-	//Одномерные массивы
+//РІС‹РІРѕРґРёС‚ РјР°СЃСЃРёРІ РЅР° СЌРєСЂР°РЅ
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void Print(int arr[], const int n);			
 void Print(double arr[], const int n);
 void Print(char arr[], const int n);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
 void Print(double arr[ROWS][COLS], const int ROWS, const int COLS);
 void Print(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
-//Возвращает сумму элементов массива
-	//Одномерные массивы
+//Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 int Sum(int arr[], const int n);			
 double Sum(double arr[], const int n);
 char Sum(char arr[], const int n);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 int Sum(int arr[ROWS][COLS], const int ROWS, const int COLS);
 double Sum(double arr[ROWS][COLS], const int ROWS, const int COLS);
 char Sum(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
-//Возвращает среднее-арифметическое элементов массива
-	//Одномерные массивы
+//Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 double Avg(int arr[], const int n);			 
 double Avg(double arr[], const int n);
 double Avg(char arr[], const int n);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 double Avg(int arr[ROWS][COLS], const int ROWS, const int COLS);
 double Avg(double arr[ROWS][COLS], const int ROWS, const int COLS);
 double Avg(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
-//Возвращает минимальное значение из массива
-	//Одномерные массивы
+//Р’РѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР°
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 int minValueIn(int arr[], const int n);	
 double minValueIn(double arr[], const int n);
 char minValueIn(char arr[], const int n);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 int minValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS);
 double minValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS);
 char minValueIn(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
-//Возвращает максимальное значение из массива
-	//Одномерные массивы
+//Р’РѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР°
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 int maxValueIn(int arr[], const int n);	
 double maxValueIn(double arr[], const int n);
 char maxValueIn(char arr[], const int n);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 int maxValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS);
 double maxValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS);
 char maxValueIn(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
-//Сортирует массив
-	//Одномерные массивы
+//РЎРѕСЂС‚РёСЂСѓРµС‚ РјР°СЃСЃРёРІ
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void Sort(int arr[], const int n);			
 void Sort(double arr[], const int n);
 void Sort(char arr[], const int n);
-	//Двумерные массивы (Не смог реализовать)
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹ (РќРµ СЃРјРѕРі СЂРµР°Р»РёР·РѕРІР°С‚СЊ)
 void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
 void Sort(double arr[ROWS][COLS], const int ROWS, const int COLS);
 void Sort(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
-//Ниже функции, которые не смог реализовать
+//РќРёР¶Рµ С„СѓРЅРєС†РёРё, РєРѕС‚РѕСЂС‹Рµ РЅРµ СЃРјРѕРі СЂРµР°Р»РёР·РѕРІР°С‚СЊ
 
-//Выполняет циклический сдвиг массива на заданное число элемменто влево
-	//Одномерные массивы
+//Р’С‹РїРѕР»РЅСЏРµС‚ С†РёРєР»РёС‡РµСЃРєРёР№ СЃРґРІРёРі РјР°СЃСЃРёРІР° РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРјРµРЅС‚Рѕ РІР»РµРІРѕ
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void shiftLeft(int arr[], const int n, int number_of_shift);
 void shiftLeft(double arr[], const int n, int number_of_shift);
 void shiftLeft(char arr[], const int n, int number_of_shift);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void shiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
 void shiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
 void shiftLeft(char arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
 
-//Выполняет циклический сдвиг массива на заданное число элемменто вправо
-	//Одномерные массивы
+//Р’С‹РїРѕР»РЅСЏРµС‚ С†РёРєР»РёС‡РµСЃРєРёР№ СЃРґРІРёРі РјР°СЃСЃРёРІР° РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРјРµРЅС‚Рѕ РІРїСЂР°РІРѕ
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void shiftRight(int arr[], const int n, int number_of_shift);
 void shiftRight(double arr[], const int n, int number_of_shift);
 void shiftRight(char arr[], const int n, int number_of_shift);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void shiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
 void shiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
 void shiftRight(char arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shift);
 
-//заполняет массив уникальными случайными числами в заданном диапазоне
-	//Одномерные массивы (Реализованы)
+//Р·Р°РїРѕР»РЅСЏРµС‚ РјР°СЃСЃРёРІ СѓРЅРёРєР°Р»СЊРЅС‹РјРё СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё РІ Р·Р°РґР°РЅРЅРѕРј РґРёР°РїР°Р·РѕРЅРµ
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹ (Р РµР°Р»РёР·РѕРІР°РЅС‹)
 void UniqueRand(int arr[], const int n);
 void UniqueRand(double arr[], const int n);
 void UniqueRand(char arr[], const int n);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void UniqueRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
 void UniqueRand(double arr[ROWS][COLS], const int ROWS, const int COLS);
 void UniqueRand(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
-//находит в массиве повторяюшиеся значения, выводит их на экран,и выводит на экран количество повторений
-	//Одномерные массивы
+//РЅР°С…РѕРґРёС‚ РІ РјР°СЃСЃРёРІРµ РїРѕРІС‚РѕСЂСЏСЋС€РёРµСЃСЏ Р·РЅР°С‡РµРЅРёСЏ, РІС‹РІРѕРґРёС‚ РёС… РЅР° СЌРєСЂР°РЅ,Рё РІС‹РІРѕРґРёС‚ РЅР° СЌРєСЂР°РЅ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРІС‚РѕСЂРµРЅРёР№
+	//РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void Search(int arr[], const int n);
 void Search(double arr[], const int n);
 void Search(char arr[], const int n);
-	//Двумерные массивы
+	//Р”РІСѓРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
 void Search(int arr[ROWS][COLS], const int ROWS, const int COLS);
 void Search(double arr[ROWS][COLS], const int ROWS, const int COLS);
 void Search(char arr[ROWS][COLS], const int ROWS, const int COLS);
@@ -126,37 +126,37 @@ void main()
 	int maxRand = 300;
 	int number_of_shift;
 
-	cout << "Вывод массива целочисленных случайных чисел на экран:\n";
+	cout << "Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹С… СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РЅР° СЌРєСЂР°РЅ:\n";
 	FillRand(arr, n, minRand, maxRand);
 	Print(arr, n);
-	cout << "Сумма элементов массива: " << Sum(arr, n) << endl;
-	cout << "Среднее-арифметическое элементов массива: " << Avg(arr, n) << endl;
-	cout << "Минимальное значение в массиве: " << minValueIn(arr, n) << endl;
-	cout << "Максимальное значение в массиве: " << maxValueIn(arr, n) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(arr, n) << endl;
+	cout << "РЎСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Avg(arr, n) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << minValueIn(arr, n) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << maxValueIn(arr, n) << endl;
 	Sort(arr, n);
-	cout << "Введите количество сдвигов: "; cin >> number_of_shift;
-	cout << "Сдвиг массива целочисленных случайных чисел влево:\n";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> number_of_shift;
+	cout << "РЎРґРІРёРі РјР°СЃСЃРёРІР° С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹С… СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РІР»РµРІРѕ:\n";
 	shiftLeft(arr, n, number_of_shift);
-	cout << "Сдвиг массива целочисленных случайных чисел вправо:\n";
+	cout << "РЎРґРІРёРі РјР°СЃСЃРёРІР° С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹С… СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РІРїСЂР°РІРѕ:\n";
 	shiftRight(arr, n, number_of_shift);
 	UniqueRand(arr, n);
-	cout << "Повторяющиеся значения:\n";
+	cout << "РџРѕРІС‚РѕСЂСЏСЋС‰РёРµСЃСЏ Р·РЅР°С‡РµРЅРёСЏ:\n";
 	Search(arr, n);
 	cout << endl;
 	const int SIZE = 8;
 	double brr[SIZE];
 
-	cout << "Вывод массива случайных чисел двойной точности на экран:\n";
+	cout << "Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РґРІРѕР№РЅРѕР№ С‚РѕС‡РЅРѕСЃС‚Рё РЅР° СЌРєСЂР°РЅ:\n";
 	FillRand(brr, SIZE, minRand, maxRand);
 	Print(brr, SIZE);
-	cout << "Сумма элементов массива: " << Sum(brr, SIZE) << endl;
-	cout << "Среднее-арифметическое элементов массива: " << Avg(brr, SIZE) << endl;
-	cout << "Минимальное значение в массиве: " << minValueIn(brr, SIZE) << endl;
-	cout << "Максимальное значение в массиве: " << maxValueIn(brr, SIZE) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(brr, SIZE) << endl;
+	cout << "РЎСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Avg(brr, SIZE) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << minValueIn(brr, SIZE) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << maxValueIn(brr, SIZE) << endl;
 	Sort(brr, SIZE);
-	cout << "Сдвиг массива случайных чисел двойной точности влево:\n";
+	cout << "РЎРґРІРёРі РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РґРІРѕР№РЅРѕР№ С‚РѕС‡РЅРѕСЃС‚Рё РІР»РµРІРѕ:\n";
 	shiftLeft(brr, SIZE, number_of_shift);
-	cout << "Сдвиг массива случайных чисел двойной точности вправо:\n";
+	cout << "РЎРґРІРёРі РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РґРІРѕР№РЅРѕР№ С‚РѕС‡РЅРѕСЃС‚Рё РІРїСЂР°РІРѕ:\n";
 	shiftRight(brr, SIZE, number_of_shift);
 	UniqueRand(brr, SIZE);
 	Search(brr, SIZE);
@@ -165,17 +165,17 @@ void main()
 	const int m = 7;
 	char crr[m];
 
-	cout << "Вывод массива из символов на экран:\n";
+	cout << "Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° РёР· СЃРёРјРІРѕР»РѕРІ РЅР° СЌРєСЂР°РЅ:\n";
 	FillRand(crr, m);
 	Print(crr, m);
-	cout << "Сумма элементов массива: " << Sum(crr, m) << endl;
-	cout << "Среднее-арифметическое элементов массива: " << Avg(crr, m) << endl;
-	cout << "Минимальное значение в массиве: " << minValueIn(crr, m) << endl;
-	cout << "Максимальное значение в массиве: " << maxValueIn(crr, m) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(crr, m) << endl;
+	cout << "РЎСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Avg(crr, m) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << minValueIn(crr, m) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << maxValueIn(crr, m) << endl;
 	Sort(crr, m);
-	cout << "Сдвиг массива из символов влево:\n";
+	cout << "РЎРґРІРёРі РјР°СЃСЃРёРІР° РёР· СЃРёРјРІРѕР»РѕРІ РІР»РµРІРѕ:\n";
 	shiftLeft(crr, m, number_of_shift);
-	cout << "Сдвиг массива из символов вправо:\n";
+	cout << "РЎРґРІРёРі РјР°СЃСЃРёРІР° РёР· СЃРёРјРІРѕР»РѕРІ РІРїСЂР°РІРѕ:\n";
 	shiftRight(crr, m, number_of_shift);
 	UniqueRand(crr, m);
 	Search(crr, m);
@@ -183,17 +183,17 @@ void main()
 
 	int i_arr2[ROWS][COLS];
 
-	cout << "Вывод двумерного массива целочисленных случайных чисел на экран:\n";
+	cout << "Р’С‹РІРѕРґ РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹С… СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РЅР° СЌРєСЂР°РЅ:\n";
 	FillRand(i_arr2, ROWS, COLS);
 	Print(i_arr2, ROWS, COLS);
-	cout << "Сумма элементов массива: " << Sum(i_arr2, ROWS, COLS) << endl;
-	cout << "Среднее-арифметическое элементов массива: " << Avg(i_arr2, ROWS, COLS) << endl;
-	cout << "Минимальное значение в массиве: " << minValueIn(i_arr2, ROWS, COLS) << endl;
-	cout << "Максимальное значение в массиве: " << maxValueIn(i_arr2, ROWS, COLS) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(i_arr2, ROWS, COLS) << endl;
+	cout << "РЎСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Avg(i_arr2, ROWS, COLS) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << minValueIn(i_arr2, ROWS, COLS) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << maxValueIn(i_arr2, ROWS, COLS) << endl;
 	Sort(i_arr2, ROWS, COLS);
-	cout << "Сдвиг двумерного массива целочисленных случайных чисел влево:\n";
+	cout << "РЎРґРІРёРі РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹С… СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РІР»РµРІРѕ:\n";
 	shiftLeft(i_arr2, ROWS, COLS, number_of_shift);
-	cout << "Сдвиг двумерного массива целочисленных случайных чисел вправо:\n";
+	cout << "РЎРґРІРёРі РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹С… СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РІРїСЂР°РІРѕ:\n";
 	shiftRight(i_arr2, ROWS, COLS, number_of_shift);
 	UniqueRand(i_arr2, ROWS, COLS);
 	Search(i_arr2, ROWS, COLS);
@@ -205,34 +205,34 @@ void main()
 		{7.8,5.1, 2.7},
 		{1.1, 2.3, 4.7}
 	};
-	cout << "Вывод двумерного массива случайных чисел двойной точности на экран:\n";
+	cout << "Р’С‹РІРѕРґ РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РґРІРѕР№РЅРѕР№ С‚РѕС‡РЅРѕСЃС‚Рё РЅР° СЌРєСЂР°РЅ:\n";
 	FillRand(d_arr2, ROWS, COLS);
 	Print(d_arr2, ROWS, COLS);
-	cout << "Сумма элементов массива: " << Sum(d_arr2, ROWS, COLS) << endl;
-	cout << "Среднее-арифметическое элементов массива: " << Avg(d_arr2, ROWS, COLS) << endl;
-	cout << "Минимальное значение в массиве: " << minValueIn(d_arr2, ROWS, COLS) << endl;
-	cout << "Максимальное значение в массиве: " << maxValueIn(d_arr2, ROWS, COLS) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(d_arr2, ROWS, COLS) << endl;
+	cout << "РЎСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Avg(d_arr2, ROWS, COLS) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << minValueIn(d_arr2, ROWS, COLS) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << maxValueIn(d_arr2, ROWS, COLS) << endl;
 	Sort(d_arr2, ROWS, COLS);
-	cout << "Сдвиг двумерного массива случайных чисел двойной точности влево:\n";
+	cout << "РЎРґРІРёРі РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РґРІРѕР№РЅРѕР№ С‚РѕС‡РЅРѕСЃС‚Рё РІР»РµРІРѕ:\n";
 	shiftLeft(d_arr2, ROWS, COLS, number_of_shift);
-	cout << "Сдвиг двумерного массива случайных чисел двойной точности вправо:\n";
+	cout << "РЎРґРІРёРі РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РґРІРѕР№РЅРѕР№ С‚РѕС‡РЅРѕСЃС‚Рё РІРїСЂР°РІРѕ:\n";
 	shiftRight(d_arr2, ROWS, COLS, number_of_shift);
 	UniqueRand(d_arr2, ROWS, COLS);
 	Search(d_arr2, ROWS, COLS);
 	cout << endl;
 
 	char c_arr2[ROWS][COLS];
-	cout << "Вывод двумерного массива из символов на экран:\n";
+	cout << "Р’С‹РІРѕРґ РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° РёР· СЃРёРјРІРѕР»РѕРІ РЅР° СЌРєСЂР°РЅ:\n";
 	FillRand(c_arr2, ROWS, COLS);
 	Print(c_arr2, ROWS, COLS);
-	cout << "Сумма элементов массива: " << Sum(c_arr2, ROWS, COLS) << endl;
-	cout << "Среднее-арифметическое элементов массива: " << Avg(c_arr2, ROWS, COLS) << endl;
-	cout << "Минимальное значение в массиве: " << minValueIn(c_arr2, ROWS, COLS) << endl;
-	cout << "Максимальное значение в массиве: " << maxValueIn(c_arr2, ROWS, COLS) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(c_arr2, ROWS, COLS) << endl;
+	cout << "РЎСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Avg(c_arr2, ROWS, COLS) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << minValueIn(c_arr2, ROWS, COLS) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << maxValueIn(c_arr2, ROWS, COLS) << endl;
 	Sort(c_arr2, ROWS, COLS);
-	cout << "Сдвиг двумерного массива из символов влево:\n";
+	cout << "РЎРґРІРёРі РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° РёР· СЃРёРјРІРѕР»РѕРІ РІР»РµРІРѕ:\n";
 	shiftLeft(c_arr2, ROWS, COLS, number_of_shift);
-	cout << "Сдвиг двумерного массива из символов вправо:\n";
+	cout << "РЎРґРІРёРі РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° РёР· СЃРёРјРІРѕР»РѕРІ РІРїСЂР°РІРѕ:\n";
 	shiftRight(c_arr2, ROWS, COLS, number_of_shift);
 	UniqueRand(c_arr2, ROWS, COLS);
 	Search(c_arr2, ROWS, COLS);
@@ -676,7 +676,7 @@ void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 
 		}
 	}
-	cout << "Массив отсортирован за " << iterations << " итераций\n";
+	cout << "РњР°СЃСЃРёРІ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅ Р·Р° " << iterations << " РёС‚РµСЂР°С†РёР№\n";
 }
 
 void Sort(double arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -702,7 +702,7 @@ void Sort(double arr[ROWS][COLS], const int ROWS, const int COLS)
 
 		}
 	}
-	cout << "Массив отсортирован за " << iterations << " итераций\n";
+	cout << "РњР°СЃСЃРёРІ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅ Р·Р° " << iterations << " РёС‚РµСЂР°С†РёР№\n";
 }
 
 void Sort(char arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -728,7 +728,7 @@ void Sort(char arr[ROWS][COLS], const int ROWS, const int COLS)
 
 		}
 	}
-	cout << "Массив отсортирован за " << iterations << " итераций\n";
+	cout << "РњР°СЃСЃРёРІ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅ Р·Р° " << iterations << " РёС‚РµСЂР°С†РёР№\n";
 }
 
 void shiftLeft(int arr[], const int n, int number_of_shift)
@@ -1064,7 +1064,7 @@ void Search(int arr[], const int n)
 			}
 		}
 	}
-	cout << "Количество повторений: " << pov << endl;
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРІС‚РѕСЂРµРЅРёР№: " << pov << endl;
 }
 
 void Search(double arr[], const int n)
